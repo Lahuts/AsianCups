@@ -1,0 +1,135 @@
+
+
+.register{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.l_side_register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(63, 38, 2, 0.403), rgba(26, 26, 26, 0.707)),url(/asset/ball.jpeg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px 0 rgba(17, 17, 17, 0.556);
+
+}
+
+.l_side_register>p{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size:2rem;
+    max-width: 40vw;
+    font-weight: 300;
+    color: #fff;
+
+}
+.l_side_register>h2{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+
+}
+
+.f_register{
+    margin: auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-style: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    width: 35vw;
+    height: 95vh;
+}
+.f_register>form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 30vw;
+    gap:1rem;
+    padding: 1rem;
+}
+
+.f_register>form>label{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #454340;
+
+}
+
+.f_register>form>input{
+    padding: .6rem;
+    border-radius: .5rem;
+    border: thin solid #cbcbcb;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+}
+.f_register>form>input::placeholder{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #cbcbcb;
+}
+.f_register>form>input:focus{
+    outline: none;
+}
+.f_register>form>input[type="submit"]{
+    background-color: #1c5af5;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: .5rem;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    margin-top: 1rem;
+}
+
+.regCo{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align:center;
+}
+
+.regCo>a{
+    text-decoration: none;
+    color: #1c5af5;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 1rem;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem 1rem;
+    border-bottom: thin solid #1c5af5;
+}
+.regCo>a:first-child{
+    border-right: thin solid #1c5af5;
+    background-color: #1c5af5;
+    color: #fff;
+}
+.regCo>a:hover{
+    background-color: #1c5af5;
+    color: #fff;
+    transition: 0.3s;
+}
+
+#connexion{
+    display: none;
+}
