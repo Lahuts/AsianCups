@@ -14,7 +14,12 @@ class Billet{
     private $equipe2;
     private $prix;
 
-    public function __construct($id ,$heure, $date, $stade, $etape, $categorie,$equipe1, $equipe2,$prix){
+    private $assignedto;
+
+    private $lieux;
+    private $place;
+
+    public function __construct($id ,$heure, $date, $stade, $etape, $categorie,$equipe1, $equipe2,$prix,$assignedto,$lieux,$place){
         $this->id = $id;
         $this->heure = $heure;
         $this->date = $date;
@@ -24,8 +29,21 @@ class Billet{
         $this->equipe1 = $equipe1;
         $this->equipe2 = $equipe2;
         $this->prix = $prix;
+        $this->assignedto = $assignedto;
+        $this->lieux = $lieux;
+        $this->place = $place;
     }
 
+    public function getLieux(){
+        return $this->lieux;
+    }
+    public function getPlace(){
+        return $this->place;
+    }
+
+    public function getAssignedTo(){
+        return $this->assignedto;
+    }
     public function getId(){
         return $this->id;
     }
@@ -75,9 +93,9 @@ class Billet{
           <span class="flag-icon '.getFlag($this->getEquipe2()).'"alt="'.$this->getEquipe2().'" title="'.$this->getEquipe2().'"></span>
           <p>'.$this->getStade().'</p>
           <p>'.$this->getHeure().' - '.$this->getDate().'</p>
-          <p class="cate">"'.$this->getCategorie().'"</p>
+          <p class="cate">"'.$this->getPlace().'"</p>
           <p class="price">$'.$this->getPrix().'</p>
-          <a href="" class="btn"><span class="arrow"></span></a>
+          <a href="/connec.php" onclick="{localStorage.setItem(\'billet_id\', '.$this->getId().');}"  class="btn"><span class="arrow"></span></a>
         </div>
       </li>
         ';

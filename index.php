@@ -131,21 +131,6 @@ https://cdn.jsdelivr.net/npm/flag-icon-css@4.1.7/css/flag-icons.min.css
           </li>
         </ul>
       </section>
-      <section class="howto">
-        <h2>Envie de réservez un billets ? comment faire ?</h2>
-        <ul class="step_by_step">
-            <li>
-                <h3>1. Connecter vous à la plateforme </h3>
-            </li>
-            <li>
-                <h3>2. Lorem ipsum dolor sit.</h3>
-            </li>
-            <li>
-                <h3>Lorem ipsum dolor sit.</h3>
-            </li>
-            <li><h3>Lorem ipsum dolor sit.</h3></li>
-        </ul>
-      </section>
     </main>
     <footer>
       <nav>

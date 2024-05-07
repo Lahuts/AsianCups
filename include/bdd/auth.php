@@ -2,7 +2,7 @@
 
 require_once 'connect_bdd.inc.php';
 
-
+session_start(); // Start the session
 
 if(isset($_POST['username']) && isset($_POST['password'])){
     $username = $_POST['username'];
@@ -12,9 +12,8 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     $result = $link->query($query);
 
     if($result->num_rows > 0){
-        Session_start();
-        header('Location: /index.php');
-
+        $_SESSION['id'] = $result->fetch_assoc()['idUtilisateur']; // Store the 'id' in the session variable
+        header('Location: /home_cli.php');
     }else{
         echo 'Wrong username or password';
     }
@@ -32,7 +31,7 @@ if(isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['tel']) && is
     if($mdp == $cmdp && $cgu == 'on'){
         if ($link->query("SELECT * FROM Utilisateur WHERE email = '$email'")->num_rows == 0){
             $link->query("INSERT INTO Utilisateur (prenom, nom, tel, email, mdp) VALUES ('$prenom', '$nom', '$tel', '$email', '$mdp')");
-            Session_start();
+            $_SESSION['id'] = $link->insert_id; // Store the 'id' in the session variable
             header('Location: /home_cli.php');
         }else{
             echo 'Email already used';
