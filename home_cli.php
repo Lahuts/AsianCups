@@ -44,7 +44,7 @@ if (isset($_SESSION['user'])) {
             </div>
             <div class="user_tab">
                 <img src="/asset/Khabib.png" alt="">
-                <a href=""><?php echo $_SESSION['user']->getPrenom() . ' ' . $_SESSION['user']->getNom() ?></a>
+                <a href="/modifier_profil.php"><?php echo $_SESSION['user']->getPrenom() . ' ' . $_SESSION['user']->getNom() ?></a>
             </div>
         </div>
 
@@ -67,14 +67,14 @@ if (isset($_SESSION['user'])) {
             <div class="vs">
                 <ul>
                     <li>
-                        <img src="/asset/espagne.png" alt="">
+                        <img src="/asset/jap.png" alt="">
                         <h3><?php echo $nextMatch['team1']; ?></h3>
                     </li>
                     <li>
                         <H3>vs</H3>
                     </li>
                     <li>
-                        <img src="asset/france.png" alt="">
+                        <img src="asset/coree.png" alt="">
                         <h3><?php echo $nextMatch['team2']; ?></h3>
                     </li>
                 </ul>
